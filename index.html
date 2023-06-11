@@ -1,3 +1,440 @@
-<html>
-	<p>Sojith Sugadan's Github Page</p>
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
+
+
+
+  
+  <title>Sojith Sugadan - Resume</title>
+    <link rel="canonical" href="https://codepen.io/Lindeun/pen/WgaYLw" />
+  
+  
+  
+  
+<style>
+body {
+    margin: 0;
+    font-family: 'Share Tech', sans-serif;
+    font-size:16px;
+    color: #505050;
+    background:#eee;
+    overflow-x:hidden;
+}
+
+main {
+    position:relative;
+    padding:7vh 0 10vh;
+    opacity:0;
+    margin-top:-5px;
+}
+
+@media all and (min-width:670px) {
+    main { 
+        width: 570px;
+        margin-left: 10vw;
+    }
+}
+
+@media all and (max-width:670px) {
+    main { margin:0 15px }
+}
+
+.wave {
+    width:100vw;
+    height:150px;
+    position:fixed;
+    bottom:0;
+    fill:#1b7477;
+    z-index:-1;
+}
+
+#one {
+    height:180px;
+    fill:#8adbd3;
+    width:120vw;
+    left:-10vw;
+}
+
+h1, h2 {
+    position:relative;
+    display:flex;
+    align-items:center;
+    font-family:'Share Tech Mono', monospace;
+    line-height: 1em;
+    word-spacing:-.1em;
+    letter-spacing:-.05em;
+    transition:.2s all ease;
+    margin-left:10px;
+    margin-bottom:15px;
+}
+
+h1 span, h2 span { 
+    background:rgba(238,238,238,.7);
+    padding:5px 7px;
+    border-radius:10px;
+    box-sizing:border-box;
+}
+h1, h2:active { color:#51b5ac; }
+h1 { font-size:2.2em }
+h2 { cursor:pointer }
+p:first-child { margin-top:0 }
+p:last-child { margin-bottom:0 }
+
+.subtext {
+    position:relative;
+    border-radius:10px;
+    background: white;
+    border:1px solid;
+    padding:13px;
+    line-height:1.5em;
+}
+
+.subtext:not(#main) {
+    display:none;
+}
+
+.subtext ul { margin:0; padding:0 25px; }
+
+.subtext a { 
+    color:#0a9; 
+    text-decoration:underline;
+    cursor:pointer;
+    transition:.2s all ease;
+}
+
+.subtext a:hover, h2:hover {
+    color:#777;
+}
+
+.subtext:before {
+    content:'';
+    position:absolute;
+    width:1px;
+    background:#bbb;
+    left:1.2em;
+    height:1.2em;
+    top:calc(-1.2em - 1px);
+}
+
+.subtext.coll:before {
+    left:1em;
+    height:1.2em;
+    top:calc(-1.2em - 1px);
+}
+
+.hex:hover {
+    transform:rotate(30deg);
+}
+
+.hex, .hex:before, .hex:after {
+    height:1em;
+    width:.59em;
+    border:solid;
+    border-width:1px 0;
+    border-radius:2px;
+    box-sizing:border-box;
+}
+
+main .hex { 
+    position:relative;
+    display:inline-block;
+    margin-right:.5em;
+    transition:.4s all ease;
+}
+
+.hex:before, .hex:after {
+    content:'';
+    position:absolute;
+    margin-top:-1px;
+    margin-left:;
+/*     color:#ccc; */
+}
+
+.hex:before { transform:rotate(60deg); }
+.hex:after { transform:rotate(-60deg); }
+
+.hex, .hex:before, .hex:after, .subtext {
+    border-color:#bbb;
+}
+
+.hex.moved {
+    transform:rotate(30deg);
+}
+
+#hex-holder {
+    position:fixed;
+    height:100vh;
+    width:100vw;
+    top:0;
+    z-index:-1;
+    pointer-events:none;
+    font-size:60px;
+}
+
+#hex-holder .hex {
+    position:fixed;
+}
+
+#uno {
+    border-radius:4px;
+    border:none;
+    background:#5b8b8c;
+    transform:rotate(-12deg);
+    bottom:30vh;
+    left:30px;
+}
+
+#uno:before, #uno:after {
+    margin-top:0;
+}
+
+#hex-holder .hex:before, #hex-holder .hex:after {
+    border:inherit;
+    border-radius:inherit;
+    background:inherit;
+}
+
+#dos {
+    border-color:#1B7477;
+    border-radius:3px;
+    border-width:5px 0;
+    font-size:100px;
+    bottom:12vh;
+    right:-20px;
+    transform:rotate(7deg);
+}
+
+#dos:before, #dos:after {
+    margin-top:-5px;
+}
+
+#tres { display:none }
+
+#bg {
+/*     z-index:100; */
+    position:fixed;
+    top:0;
+    height:100vh;
+    width:100vw;
+    box-sizing:border-box;
+    border:5px solid black;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+</head>
+
+<body translate="no">
+  <html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech|Share+Tech+Mono" rel="stylesheet" />
+    <title>Designs by Laighlin</title>
+</head>
+
+<body onload="draw()">
+    <canvas id="bg"></canvas>
+    <main id="content">
+        <h1>
+            <div class="hex moved"></div><span>About Me</span></h1>
+        <div class="subtext" id="main">
+            <p>Hi, I am Sojith Sugadan.</p>
+<p>A Senior Manager At Allianz Technology SE, I have 17 years of experience in IT.<br>I manage multiple teams of Performance Engineers, and of IT Monitoring SMEs. I have developed these teams, the processes they follow and the technical framework they use.</p>
+            <p>I am an Expert in Loadrunner, Dynatrace, Scripting (Shell, Powershell and Python).</p>
+        </div>
+        <h2>
+            <div class="hex"></div><span>Skills Summary</span></h2>
+        <div class="subtext coll">
+            Loadrunner | Dynatrace | Shell Scripting | Powershell Scripting | Python | Ansible | Jenkins
+        </div>
+        <h2>
+            <div class="hex"></div><span>Professonal Experience</span></h2>
+        <div class="subtext coll">
+            <p><b>Senior Manager - Allianz Technology Limited (Nov 2015 - present)</b><br>Performance Engineering | IT Monitoring | Process Owner | People Management</p>
+            <p><b>Technical Lead - Infosys Technology Limited (Oct 2010 -Nov 2015)</b><br>Performance Testing</p>
+            <p><b>Senior Software Engineer - Accenture India - (July 2006 - Oct 2010)</b><br>Performance Testing</p>
+        </div>
+        <h2>
+            <div class="hex"></div><span>Key Responsibilites and Achievements</span></h2>
+        <div class="subtext coll">
+            <b>Performance Engineering</b>
+            <ul>
+            <li>Developed and manage a team of Performance Engineers. The average exp of the team is
+            9+ years
+            <li>Responsibilities include Project Scoping, Requirement Analysis, Project planning,
+            Estimation, Resourcing/Staffing and scheduling for Projects, Execution, Test Analysis and
+            Sign off
+            <li>Designed the architecture of performance test framework, methodologies and the tools.
+            <li>Develop & Maintain the Performance Test Strategy - Work with Business teams and
+            Development teams to product the performance test strategy
+            <li>My team performance tests insurance applications - developed in PEGA and Guidewire,
+            Rating engines such as Polaris RTE and RADAR
+            <li>My team performance tests server technologies - such as IIB/ACE, JBOSS, Apache,
+            ASP.NET, openAM, Oracle OCI DB servers running on Windows, Linux and Kubernetes
+            clusters
+            <li><u>AUTOMATION and DEVOPS</u>
+                <ul>
+                <li>Devops - implementation of Performance tests into the DEVOPS.</li>
+                <li>Deployments in the environments automatically trigger Performance Tests.</li>
+                <li>Test can also be triggered from MS Teams.</li>
+                <li>Results are published automatically to MS Teams channels.</li>
+                <li>Entire framework developed using powershell and LRE APIs.</li>
+                <li>Cost Saving of 2 Full Time Resource in our team.</li>
+                </ul>
+            </ul>
+            <br>
+            <b>IT Monitoring</b>
+            <ul>
+            <li>Set up the entire Dynatrace framework for monitoring of all infrastructure (600+ Windows
+            and Linux servers, Oracle DB Servers, AKS clusters on Azure) - Infrastructure/Full Stack</li>
+            <li>Monitoring and Synthetic Monitoring</li>
+            <li>Developed and manage a team of IT Monitoring SMEs. The average exp of the team is
+            3+ years</li>
+            <li>Their responsibilites include administration of Dynatrace SaaS and set up of</li>
+            <li>Infrastructure, Application and Synthetic Monitoring</li>
+            <li><u>DEVOPS</u></li>
+                <ul>
+                <li>Auto Tagging, Alerting profiles, Notifications, Agent Updates, Maintenance Windows
+                - Their setup is automated such that developers and server admins can incorporate
+                them into their processes</li>
+                <li>The above settings are saved as configuration files</li>
+                <li>Any updates or creation of a new configuration triggers the appropriate DT API thus
+                creating/updating the new setting</li>
+                <li>Jenkins, Python and Github used for the above implementation</li>
+                <li>Infrastructure reports for 400+ servers (such as availability reports, alerting reports,
+                utilization reports etc) is entirely automated through use of Python</li>
+                </ul>
+            <li><u>SELF-HEALING/ AUTO-REMEDIATION</u></li>
+                <ul>
+                <li>Framework implemented using Dynatrace alerts , Python, and Jenkins.</li>
+                <li>Production events trigger an alert from DT which is recieved by a REST endpoint.
+                The alert triggers a remediation job immediately thus preventing an incident.</li>
+                <li>Used in events such as Disk full, job failures, high memory/CPU usage.</li>
+                <li>DT simultaneously creates a SNOW and send a mobile alert to the technician</li>
+                </ul>
+            </ul>
+            <br>
+            <b>Process Management, and People Management</b><br>
+                <ul>                
+                <li>Hiring, developing and leading team members</li>
+                <li>Employee Engagement, Career Development & Performance Management</li>
+                <li>Work Allocation/Management</li>
+                <li>Handling of QMS/ISMS/IMS Audits</li>            
+                </ul>
+            </p>
+        </div>
+        
+        <h2>
+            <div class="hex"></div><span>Major Projects Managed</span></h2>
+        <div class="subtext coll">
+            <b>Performance Engineering</b> - Some of the critical Performance Engineering projects I have managed
+            <ul>
+                <li>JBOSS Upgrade</li>
+                <li>MQ Upgrade</li>
+                <li>Mainframe Upgrade</li>
+                <li>Server OS Upgrades (Linux/ Windows)</li>
+                <li>Enterprise Upgrades (IIB to ACE)</li>
+                <li>Oracle DB upgrades</li>
+                <li>Upgrades of application which use Insurance framework such as PEGA, Guidewire</li>
+            </ul>
+            <br>
+            <b>IT Monitoring</b>
+            <ul>
+                <li>Dynatrace implementation for all prod and pre-prod infrastructure</li>
+                <li>Infrastructure/full stack monitoring</li>
+                <li>Synthetic Monitoring</li>
+                <li>Alerting integration with MS Team/ SNOW/ Text Messages</li>
+                <li>Custom Events Set up</li>
+                <li>Application Support and Infrastructure support dashboards</li>
+                <li>Billing Dashboards</li>
+                <li>This entire implementation was executed through use of the automation</li>
+            </ul>
+        </div>
+
+        <h2>
+            <div class="hex"></div><span>My Github Repos</span></h2>
+        <div class="subtext coll">
+            <ul>
+                <li>Loadrunner E2E automation – incorporating performance tests into the devops process - <a href="https://github.com/sojith/loadrunner_devops"> link</a></li> 
+                <li>Self-Healing/remediation - automatically resolving infra issues upon alerts - <a href="https://github.com/sojith/Remediation"> link</a></li>
+                <li>Dynatrace Reports – Creating CSV capacity & alert reports from Dynatrace automatically - <a href="https://github.com/sojith/DynatraceReports"> link</a></li>
+                <li>Deploying code commits automatically into a test env server - <a href="https://github.com/sojith/DevOps_AutoDeploy"> link</a></li>
+            </ul>
+        </div>
+
+        <h2>
+            <div class="hex"></div><span>Education</span></h2>
+        <div class="subtext coll">
+            <p><b>College of Engineering, Trivandrum</b><br>Electrical & Electronics Engineering, Kerala University, 2002-06. Aggregate 74.5%</p>
+            <p><b>The ShriRam School, Gurgaon</b><br>High School Certificate(10+2), ICSE, 2001 .Aggregate 83%</p>
+        </div>
+        
+        <h2>
+            <div class="hex"></div><span>Contact Me</span></h2>
+        <div class="subtext coll">
+            <ul>
+                <li>E-mail: <a>sojith@gmail.com</a></li>
+                <li>Github: <a href="https://github.com/sojith">https://github.com/sojith</a></li>
+            </ul>
+        </div>
+    </main>
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" class="wave" id="one"><path d="M-13.36,88.98 C168.85,182.73 276.72,-73.84 506.31,79.10 L500.00,150.00 L0.00,150.00 Z"></path></svg>
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" class="wave" id="two"><path d="M-13.36,88.98 C168.85,182.73 276.72,-73.84 506.31,79.10 L500.00,150.00 L0.00,150.00 Z"></path></svg>
+    <div id="hex-holder">
+        <div class="hex" id="uno"></div>
+        <div class="hex" id="dos"></div>
+        <div class="hex" id="tres"></div>
+    </div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+
+</html>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+  
+      <script id="rendered-js" >
+function draw() {
+  var canvas = $('canvas')[0];
+  if (canvas.getContext) {
+    var ctx = canvas.getContext('2d');
+    ctx.fillStyle = 'rgb(200, 0, 0)';
+    ctx.fillRect(10, 10, 50, 50);
+    ctx.fillStyle = 'rgba(0, 0, 200, 0.5)';
+    ctx.fillRect(30, 30, 50, 50);
+  }
+}
+
+$(document).ready(function () {
+  // $(document).draw();
+  $('#content').animate({
+    opacity: 1,
+    marginTop: '0' },
+  800);
+  $('h2').click(function () {
+    $(this).next('.subtext').slideToggle('fast');
+    $(this).children('.hex').toggleClass('moved');
+  });
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+</body>
+
 </html>
